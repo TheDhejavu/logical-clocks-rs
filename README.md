@@ -1,8 +1,8 @@
 # logical-clocks-rs
 
-A logical clock is a mechanism for capturing chronological and causal relationships in a distributed system. This `crate` provides an implementation of Lamport clocks, which are a type of logical clock used to order events in a distributed system.
+A logical clock is a mechanism for capturing chronological and causal relationships in a distributed system. This `crate` provides an implementation of `Lamport Clock`, `Vector Clock`, which are a type of logical clock used to order events in a distributed system.
 
-## Lamport Time
+## Lamport Clock
 
 ### Overview
 
