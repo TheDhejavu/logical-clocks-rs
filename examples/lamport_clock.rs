@@ -16,7 +16,11 @@ fn main() {
     println!("Current time: {:?}", time2);
 
     // Compare a higher Lamport time from another process
-    clock.compare(LamportTime(10, Identifier::default()));
+    let default_identifier = Identifier::default();
+    clock.compare(LamportTime(10, default_identifier.clone()));
+
+    println!("Default Identifier: {:?}", default_identifier.to_string());
+
     let time3 = clock.time();
     println!("Current time after witness: {:?}", time3); 
 
