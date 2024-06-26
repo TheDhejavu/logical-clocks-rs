@@ -1,29 +1,8 @@
 use std::sync::atomic::{AtomicU64, Ordering};
 use std::cmp::Ordering as CmpOrdering;
 use std::convert::TryInto;
-use std::hash::Hash;
 use serde::{Serialize, Deserialize};
-use uuid::Uuid;
-
-/// Represents identifier
-#[derive(Debug, Serialize, Deserialize, Clone, PartialEq, Eq, PartialOrd, Ord, Hash)]
-pub struct Identifier(Vec<u8>);
-
-impl Identifier {
-    fn new() -> Self {
-        Identifier(Uuid::new_v4().as_bytes().to_vec())
-    }
-
-    fn from_bytes(bytes: Vec<u8>) -> Self {
-        Identifier(bytes)
-    }
-}
-
-impl Default for Identifier {
-    fn default() -> Self {
-        Identifier::new()
-    }
-}
+use crate::Identifier;
 
 /// Represents a Lamport time value.
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
@@ -180,6 +159,10 @@ impl Clone for LamportClock {
 
 #[cfg(test)]
 mod tests {
+    use uuid::Uuid;
+
+    use crate::Identifier;
+
     use super::*;
 
     #[test]
