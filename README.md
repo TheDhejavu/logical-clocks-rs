@@ -74,10 +74,7 @@ fn main() {
 
 ## Vector Clock
 
-A vector clock is a data structure used for determining the partial ordering of events in a distributed system and detecting causality violations. Just as in Lamport timestamps, inter-process messages contain the state of the sending process's logical clock. A vector clock of a system of N processes is an array/vector of N logical clocks, one clock per process; a local "largest possible values" copy of the global clock-array is kept in each process.
-
-*Source: [Wikipedia Vector Clocks](https://en.wikipedia.org/wiki/Vector_clock)*
-
+A vector clock is an array of logical clocks, each representing a node in a distributed system. Each node maintains a vector of counters, where each counter corresponds to another node.
 
 ### Examples
 
