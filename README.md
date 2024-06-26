@@ -150,3 +150,9 @@ fn main() {
 
 - `new() -> Self`: Creates a new empty vector.
 - `add(&mut self, id: Identifier) -> &mut Self`: Adds an identifier to the vector and initializes it to zero.
+
+## References
+- https://youtube.com/watch?v=q_UZ532Os14
+- https://miafish.wordpress.com/2015/03/11/lamport-vector-clocks
+- https://adamwulf.me/2021/05/distributed-clocks-and-crdts/
+- https://exhypothesi.com/clocks-and-causality/
